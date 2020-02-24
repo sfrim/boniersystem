@@ -17,7 +17,7 @@ import javafx.stage.Stage;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class BoniersystemController extends Application
+public class Controller extends Application
 {
     
     BarView barView = new BarView();
@@ -33,7 +33,7 @@ public class BoniersystemController extends Application
     public Bar dieBar = new Bar();
     public Kasse dieKasse = new Kasse(5);
     
-    public BoniersystemController()
+    public Controller()
     {
         kuecheView.getKuecheButton().setOnAction(this::kuecheButton);
         barView.getBarButton().setOnAction(this::barButton);
