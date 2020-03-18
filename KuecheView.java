@@ -18,7 +18,6 @@ public class KuecheView extends GridPane
     
     public KuecheView()
     {
-       super();
        Label title = new Label("KŸche");
        title.setFont(new Font("Arial", 20));
        this.add(title,0,0);

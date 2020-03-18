@@ -20,7 +20,6 @@ public class KasseView extends GridPane
     
     public KasseView()
     {
-       super();
        Label title = new Label("Kasse");
        title.setFont(new Font("Arial", 20));
        

@@ -22,7 +22,7 @@ public class BoniersystemView
      
     public BoniersystemView(BarView barView,KasseView kasseView, KuecheView kuecheView, HandgeraetView handTerminalView)
     {
-       pane.add(handTerminalView,0,0);
+        pane.add(handTerminalView,0,0);
         pane.add(kasseView,1,0);
         pane.add(kuecheView,0,1);
         pane.add(barView,1,1);

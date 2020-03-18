@@ -18,7 +18,6 @@ public class BarView extends GridPane
     
     public BarView()
     {
-       super();
        Label title = new Label("Bar");
        title.setFont(new Font("Arial", 20));
        this.add(title,0,0);

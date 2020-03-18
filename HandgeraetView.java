@@ -7,8 +7,8 @@ import javafx.scene.text.Font;
 /**
  * Write a description of class KuecheGUI here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Sven Frimont
+ * @version 18.03.2020
  */
 public class HandgeraetView extends GridPane
 {
@@ -23,7 +23,6 @@ public class HandgeraetView extends GridPane
     
     public HandgeraetView()
     {
-       super();
        Label title = new Label("Bedienung am Tisch");
        title.setFont(new Font("Arial", 20));
        
