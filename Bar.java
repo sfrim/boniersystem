@@ -2,8 +2,8 @@ import java.util.*;
 import java.text.DateFormat;
 
 /**
- * @author 
- * @version 
+ * @author Sven Frimont
+ * @version 18.03.2020
  */
 public class Bar
 {

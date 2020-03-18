@@ -1,7 +1,7 @@
 
 /**
  * @author Sven Frimont 
- * @version 21.01.2012
+ * @version 18.03.2020
  */
 public class Getraenk extends Artikel
 {

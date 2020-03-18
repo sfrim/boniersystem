@@ -10,10 +10,10 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 /**
- * Write a description of JavaFX class KassensystemGUIfx here.
+ * View des gesamten Boniersystems. Dieser View enthaelt die vier anderen Views
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Sven Frimont
+ * @version 18.03.2020
  */
 public class BoniersystemView
 {

@@ -5,7 +5,7 @@ import javafx.scene.text.Font;
 
 
 /**
- * Write a description of class KuecheGUI here.
+ * View für das Handgeraet des Kellners
  *
  * @author Sven Frimont
  * @version 18.03.2020

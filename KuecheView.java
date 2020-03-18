@@ -5,10 +5,10 @@ import javafx.scene.text.Font;
 
 
 /**
- * Write a description of class KuecheGUI here.
+ * View für die Kueche
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Sven Frimont
+ * @version 18.03.2020
  */
 public class KuecheView extends GridPane
 {

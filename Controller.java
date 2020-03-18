@@ -12,10 +12,10 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 /**
- * Write a description of JavaFX class KassensystemController here.
+ * Der Controller für das Boniersystem
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Sven Frimont
+ * @version 18.03.2020
  */
 public class Controller extends Application
 {
