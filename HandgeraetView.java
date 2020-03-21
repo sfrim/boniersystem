@@ -76,12 +76,12 @@ public class HandgeraetView extends GridPane
     }
     
     
-    public int getGetraenkNummer()
+    public int getGetraenkNr()
     {
         return Integer.parseInt(iGetraenkNr.getText());
     }
     
-    public int getEssenNummer()
+    public int getEssenNr()
     {
         return Integer.parseInt(iEssenNr.getText());
     }

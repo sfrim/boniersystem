@@ -35,13 +35,13 @@ public class Controller extends Application
     
     public Controller()
     {
-        kuecheView.getKuecheButton().setOnAction(this::kuecheButton);
-        barView.getBarButton().setOnAction(this::barButton);
-        handgeraetView.getGetraenkBestellenButton().setOnAction(this::getraenkBestellenButton);
-        handgeraetView.getEssenBestellenButton().setOnAction(this::essenBestellenButton);
-        handgeraetView.getBestellungAbsendenButton().setOnAction(this::bestellungAbsendenButton);  
-        kasseView.getTischNrComboBox().setOnAction(this::tischNrComboBox);
-        kasseView.getBezahlungErfolgtButton().setOnAction(this::bezahlungErfolgtButton);
+        kuecheView.getKuecheButton().setOnAction(this::kuecheButtonClicked);
+        barView.getBarButton().setOnAction(this::barButtonClicked);
+        handgeraetView.getGetraenkBestellenButton().setOnAction(this::getraenkBestellenButtonClicked);
+        handgeraetView.getEssenBestellenButton().setOnAction(this::essenBestellenButtonClicked);
+        handgeraetView.getBestellungAbsendenButton().setOnAction(this::bestellungAbsendenButtonClicked);  
+        kasseView.getTischNrComboBox().setOnAction(this::tischNrComboBoxChanged);
+        kasseView.getBezahlungErfolgtButton().setOnAction(this::bezahlungErfolgtButtonClicked);
         
         
         this.dieDatenbank = new Artikeldatenbank();
@@ -61,31 +61,31 @@ public class Controller extends Application
     }
     
     
-    public void kuecheButton(Event event) {
+    public void kuecheButtonClicked(Event event) {
         dieKueche.zurNaechstenBestellung();
         aktualisiereViews();
     }
     
-    public void barButton(ActionEvent event) {
+    public void barButtonClicked(ActionEvent event) {
         dieBar.zurNaechstenBestellung();
         aktualisiereViews();
     }
     
-    public void getraenkBestellenButton(ActionEvent event) {        
-        Artikel auswahl = this.dieDatenbank.sucheGetraenk(handgeraetView.getGetraenkNummer());
+    public void getraenkBestellenButtonClicked(ActionEvent event) {        
+        Artikel auswahl = this.dieDatenbank.sucheGetraenk(handgeraetView.getGetraenkNr());
         this.dieBestellung.artikelHinzufuegen(auswahl, 1);
         handgeraetView.loescheEingabeGetraenk();
         aktualisiereViews();
     }
     
-    public void essenBestellenButton(ActionEvent event) {
-        Artikel auswahl = this.dieDatenbank.sucheEssen(handgeraetView.getEssenNummer());
+    public void essenBestellenButtonClicked(ActionEvent event) {
+        Artikel auswahl = this.dieDatenbank.sucheEssen(handgeraetView.getEssenNr());
         this.dieBestellung.artikelHinzufuegen(auswahl, 1);
         handgeraetView.loescheEingabeEssen();
         aktualisiereViews();
     }
     
-    public void bestellungAbsendenButton(ActionEvent event) {
+    public void bestellungAbsendenButtonClicked(ActionEvent event) {
         // Die Tischnummer zu der Bestellung abfragen
         // und zu der Bestellung speichern
         int tischNr = handgeraetView.getTischNr();
@@ -105,14 +105,14 @@ public class Controller extends Application
        aktualisiereViews();
     }
     
-    public void tischNrComboBox(Event event)
+    public void tischNrComboBoxChanged(Event event)
     {
         int tischNr = kasseView.getTischNr();
         dieKasse.setTischNr(tischNr);
         aktualisiereViews();
     }
     
-    public void bezahlungErfolgtButton(Event event)
+    public void bezahlungErfolgtButtonClicked(Event event)
     {
         dieKasse.rechnungLoeschen(kasseView.getTischNr());
     }

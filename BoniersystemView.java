@@ -1,10 +1,4 @@
-
-
-import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.geometry.Insets;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -20,9 +14,9 @@ public class BoniersystemView
     
     GridPane pane = new GridPane();
      
-    public BoniersystemView(BarView barView,KasseView kasseView, KuecheView kuecheView, HandgeraetView handTerminalView)
+    public BoniersystemView(BarView barView,KasseView kasseView, KuecheView kuecheView, HandgeraetView handGeraetView)
     {
-        pane.add(handTerminalView,0,0);
+        pane.add(handGeraetView,0,0);
         pane.add(kasseView,1,0);
         pane.add(kuecheView,0,1);
         pane.add(barView,1,1);
