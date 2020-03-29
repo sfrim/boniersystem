@@ -73,14 +73,6 @@ public class Bestellung
     }
     
     /**
-     * Alle Bestellposten werden gelöscht
-     */
-    public void loeschen()
-    {
-        bestellposten.clear();
-    }
-    
-    /**
      * den Artikel an der angebenen Bestellposition zurückgeben
      */
     public Artikel getArtikel(int pPosition)

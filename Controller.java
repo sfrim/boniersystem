@@ -115,8 +115,8 @@ public class Controller extends Application
     public void bezahlungErfolgtButtonClicked(Event event)
     {
         dieKasse.rechnungLoeschen(kasseView.getTischNr());
+        aktualisiereViews();
     }
-    
     
     public void aktualisiereViews() {
         handgeraetView.setView(dieBestellung);
